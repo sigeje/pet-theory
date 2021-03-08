@@ -35,8 +35,8 @@ async function createTestData(recordCount) {
   console.log(`Created file ${fileName} containing ${recordCount} records.`);
 
   // A text log entry
-  const success_message = 'Success: createTestData - Created file ${fileName} containing ${recordCount} records.';
-  const entry = log.entry({resource: resource}, {name: '${fileName}', recordCount: '${recordCount}', message: '${success_message}'});
+  const success_message = `Success: createTestData - Created file ${fileName} containing ${recordCount} records.`;
+  const entry = log.entry({resource: resource}, {name: `${fileName}`, recordCount: `${recordCount}`, message: `${success_message}`});
   log.write([entry]);
 }
 

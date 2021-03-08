@@ -28,7 +28,7 @@ function writeToFirestore(records){
     var docRef = db.collection('customers').doc(record.email);
     batch.set(docRef, record);
     if((i+1) % 500 == 0) {
-      console.log('Writing record ${i + 1}');
+      console.log(`Writing record ${i + 1}`);
       batchCommits.push(batch.commit());
       batch = db.batch();
     }
@@ -59,8 +59,8 @@ async function importCsv(csvFileName) {
   console.log(`Wrote ${records.length} records`);
 
   // A text log entry
-  success_message = 'Success: importTestData - Wrote ${records.length} records'
-  const entry = log.entry({resource: resource}, {message: '${success_message}'});
+  success_message = `Success: importTestData - Wrote ${records.length} records`
+  const entry = log.entry({resource: resource}, {message: `${success_message}`});
   log.write([entry]);
 }
 
