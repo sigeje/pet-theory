@@ -12,6 +12,7 @@
   "dependencies": {
     "@google-cloud/firestore": "^4.9.6",
     "@google-cloud/logging": "^9.1.0",
-    "csv-parse": "^4.4.5"
+    "csv-parse": "^4.4.5",
+    "faker": "^5.4.0"
   }
 }
